@@ -45,10 +45,26 @@ const questions = [
         type: 'list',
         name: 'certifications',
         choices: [
-            'javascript',
-            'php',
-            'python',
-            'ruby'
+            {
+                key: 'mit',
+                name: 'mitLicense',
+                value: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+            },
+            {
+                key: 'mozilla',
+                name: 'mozilla',
+                value: '[![License: MPL 2.0] (https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+            },
+            {
+                key: 'Perl',
+                name: 'perlLicense',
+                value: '[![License: Artistic-2.0] (https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)'
+            },
+            {
+                key: 'sil',
+                name: 'silLicense',
+                value: '[![License: Open Font-1.1] (https://img.shields.io/badge/License-OFL%201.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)'
+            }
         ]
     },
     // ask user for github username
@@ -70,7 +86,7 @@ function writeToFile(fileName, data) {
     // access the project title property
     // save it to a variable
     // use writeFile to append it to readme
-    fs.writeFile(${fileName}, (answers), (err) =>
+    fs.writeFile(fileName, (data), (err) =>
     err ? console.error(err) : console.log('Success!')
     );
 }
