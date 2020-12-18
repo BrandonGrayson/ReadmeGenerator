@@ -1,10 +1,12 @@
 var inquirer = require('inquirer')
+const fs = require('fs')
+//const generateMarkdown = require('generate-markdown.js')
 // array of questions for user
 const questions = [
     // Ask the user for project title
     {
         type: 'input',
-        name: 'project title',
+        name: 'projectTitle',
         message: 'what is your project title?'
     },
     // get a description of project
@@ -39,20 +41,63 @@ const questions = [
     },
     // list of certifications for project
     {
-        type: 'list'
+        type: 'list',
+        name: 'certifications',
+        choices: [
+            'javascript',
+            'php',
+            'python',
+            'ruby'
+        ]
+    },
+    // ask user for github username
+    {
+        type: 'input',
+        name: 'username',
+        message: 'what is your Github username?'
+    },
+    // ask for email address
+    {
+        type: 'input',
+        name: 'email',
+        message: 'what is your email address?'
     }
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
+    // access the project title property
+    // save it to a variable
+    // use writeFile to append it to readme
+    fs.writeFile('readme', (answers), (err) =>
+    err ? console.error(err) : console.log('Success!')
+    );
 }
 
 // function to initialize program
 function init() {
     inquirer.prompt(questions).then((answers) => {
-        console.log(JSON.stringify(answers, null, '  '));
-      });
+        console.log(JSON.stringify(answers, null, '  '))
+        
+        let readmeData = `Title: ${answers.projectTitle} ${answers.certifications}
+        Description: ${answers.description}\n Installation: ${answers.installation}\n
+        Usage: ${answers.usage}\n Contribution: ${answers.contribution}\n 
+        test: ${answers.test}\n Certifications: ${answers.certifications}\n
+        Questions: contact ${answers.username} email: ${answers.email}`
+        fs.writeFile('readme.md', readmeData, (err) =>
+        err ? console.error(err) : console.log('Success!')
+        );
+        
+        // access the result from description input
+        // append to a file called 
+
+    });
+     
 }
 
 // function call to initialize program
 init();
+
+// fs.writeFile('log.txt', isHome, (err) =>
+// err ? console.error(err) : console.log('Success!')
+// );
