@@ -45,8 +45,7 @@ function generateMarkdown(data) {
 
   ### Questions?
   ### Contact
- * [${data.username} Github Account] (https://github.com/${data.username})
- * Email: [${data.email}]
+ * If you have any questions and contact me at (https://github.com/${data.username}) the email to best reach me at is Email: [${data.email}]
   `;
 
   // //let readmeData = `Title: ${answers.projectTitle} ${answers.certifications}
