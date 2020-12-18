@@ -1,5 +1,6 @@
-var inquirer = require('inquirer')
-const fs = require('fs')
+const inquirer = require('inquirer')
+const fs = require('fs');
+const generateMarkdown = require('./generate-markdown');
 //const generateMarkdown = require('generate-markdown.js')
 // array of questions for user
 const questions = [
@@ -76,17 +77,21 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
+    // run the inquirer. prompt function to prompt questions
     inquirer.prompt(questions).then((answers) => {
-        console.log(JSON.stringify(answers, null, '  '))
-        
-        let readmeData = `Title: ${answers.projectTitle} ${answers.certifications}
-        Description: ${answers.description}\n Installation: ${answers.installation}\n
-        Usage: ${answers.usage}\n Contribution: ${answers.contribution}\n 
-        test: ${answers.test}\n Certifications: ${answers.certifications}\n
-        Questions: contact ${answers.username} email: ${answers.email}`
-        fs.writeFile('readme.md', readmeData, (err) =>
-        err ? console.error(err) : console.log('Success!')
-        );
+        console.log(answers)
+        writeToFile('README.md', generateMarkdown(answers))
+
+        // console.log(JSON.stringify(answers, null, '  '))
+
+        // let readmeData = `Title: ${answers.projectTitle} ${answers.certifications}
+        // Description: ${answers.description}\n Installation: ${answers.installation}\n
+        // Usage: ${answers.usage}\n Contribution: ${answers.contribution}\n 
+        // test: ${answers.test}\n Certifications: ${answers.certifications}\n
+        // Questions: contact ${answers.username} email: ${answers.email}`
+        // fs.writeFile('readme.md', readmeData, (err) =>
+        // err ? console.error(err) : console.log('Success!')
+        // );
         
         // access the result from description input
         // append to a file called 
