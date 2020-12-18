@@ -24,6 +24,10 @@ There will be a few more questions about the project so we can build an accurate
 
 Once the last question has been submitted you should see success in the console under the data you just filled out!
 
+<img width="713" alt="Screen Shot 2020-12-18 at 5 47 21 PM" src="https://user-images.githubusercontent.com/64443434/102668240-6eb23680-4159-11eb-92be-2656b8764316.png">
+
+Now you have successfully created a readme file it should look similar too the below example
+
 
 
 
