@@ -28,6 +28,17 @@ Once the last question has been submitted you should see success in the console 
 
 Now you have successfully created a readme file it should look similar too the below example
 
+<img width="1440" alt="Screen Shot 2020-12-18 at 5 51 37 PM" src="https://user-images.githubusercontent.com/64443434/102668373-bdf86700-4159-11eb-968f-1c862d4ff2bc.png">
+
+### Contributors
+Brandon Grayson
+
+#### Links
+https://github.com/BrandonGrayson/ReadmeGenerator
+
+#### Walk Through Video Guide
+
+
 
 
 
