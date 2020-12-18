@@ -6,7 +6,7 @@ function generateMarkdown(data) {
   ${data.license}
 
   click badge for more info.
-  
+
   <details>
   <summary> Table of Contents </summary
 
@@ -21,6 +21,25 @@ function generateMarkdown(data) {
   -[Test] (#Test)
 
   -[Contact] (#Contact)
+
+  ### Description
+  ${data.description}
+
+  ### Installation
+  ${data.installation}
+
+  ### Usage
+  ${data.usage}
+
+  ### Contributors
+  ${data.contributors}
+
+  ### Tests
+  ${data.test}
+
+  ### Questions?
+ * [${data.username} Github Account] (https://github.com/${data.username})
+ * Email: [${data.email}]
   `;
 
   // //let readmeData = `Title: ${answers.projectTitle} ${answers.certifications}
