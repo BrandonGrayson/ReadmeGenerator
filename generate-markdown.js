@@ -7,6 +7,20 @@ function generateMarkdown(data) {
 
   click badge for more info.
   
+  <details>
+  <summary> Table of Contents </summary
+
+  -[Description] (#Description)
+
+  -[Installation] (#Installation)
+
+  -[Usage] (#Usage)
+
+  -[Contributors] (#Contributors)
+
+  -[Test] (#Test)
+
+  -[Contact] (#Contact)
   `;
 
   // //let readmeData = `Title: ${answers.projectTitle} ${answers.certifications}
