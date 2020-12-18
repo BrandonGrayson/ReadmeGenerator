@@ -43,7 +43,7 @@ const questions = [
     // list of certifications for project
     {
         type: 'list',
-        name: 'certifications',
+        name: 'license',
         choices: [
             {
                 key: 'mit',

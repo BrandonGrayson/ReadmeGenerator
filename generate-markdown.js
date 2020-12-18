@@ -8,19 +8,22 @@ function generateMarkdown(data) {
   click badge for more info.
 
   <details>
+
   <summary> Table of Contents </summary
 
-  -[Description] (#Description)
+  [Description](###Description)
 
-  -[Installation] (#Installation)
+  [Installation](###Installation)
 
-  -[Usage] (#Usage)
+  [Usage](###Usage)
 
-  -[Contributors] (#Contributors)
+  [Contributors](###Contributors)
 
-  -[Test] (#Test)
+  [Test](###Test)
 
-  -[Contact] (#Contact)
+  -[Contact](###Contact)
+
+</details>
 
   ### Description
   ${data.description}
@@ -32,12 +35,14 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ### Contributors
-  ${data.contributors}
+  ${data.contribution}
 
   ### Tests
   ${data.test}
 
   ### Questions?
+
+  ### Contact
  * [${data.username} Github Account] (https://github.com/${data.username})
  * Email: [${data.email}]
   `;
