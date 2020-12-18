@@ -44,6 +44,7 @@ const questions = [
     {
         type: 'list',
         name: 'license',
+        message: 'what kind of license is needed',
         choices: [
             {
                 key: 'mit',
@@ -53,17 +54,17 @@ const questions = [
             {
                 key: 'mozilla',
                 name: 'mozilla',
-                value: '[![License: MPL 2.0] (https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+                value: '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
             },
             {
                 key: 'Perl',
                 name: 'perlLicense',
-                value: '[![License: Artistic-2.0] (https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)'
+                value: '[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)'
             },
             {
                 key: 'sil',
                 name: 'silLicense',
-                value: '[![License: Open Font-1.1] (https://img.shields.io/badge/License-OFL%201.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)'
+                value: '[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL%201.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)'
             }
         ]
     },
@@ -95,9 +96,6 @@ function writeToFile(fileName, data) {
 function init() {
     // run the inquirer. prompt function to prompt questions
     inquirer.prompt(questions).then((answers) => { 
-
-        console.log(answers)
-
         writeToFile('README.md', generateMarkdown(answers))
 
         // console.log(JSON.stringify(answers, null, '  '))
