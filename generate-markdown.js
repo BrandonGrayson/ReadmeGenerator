@@ -1,11 +1,13 @@
 //function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}`
+  return `# ${data.projecttitle}
   
+  ## License Badge
+  ${data.license}
+
+  click badge for more info.
   
-  
-  
-  ;
+  `;
 
   // //let readmeData = `Title: ${answers.projectTitle} ${answers.certifications}
   // Description: ${answers.description}\n Installation: ${answers.installation}\n
