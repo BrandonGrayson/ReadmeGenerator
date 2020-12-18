@@ -20,5 +20,10 @@ Follow the question prompts the first question asks the project name
 
 There will be a few more questions about the project so we can build an accurate readme so have the information ready
 
+<img width="713" alt="Screen Shot 2020-12-18 at 5 47 21 PM" src="https://user-images.githubusercontent.com/64443434/102668129-298e0480-4159-11eb-88a6-2e2e5251d42e.png">
+
+Once the last question has been submitted you should see success in the console under the data you just filled out!
+
+
 
 
