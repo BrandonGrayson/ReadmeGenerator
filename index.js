@@ -70,7 +70,7 @@ function writeToFile(fileName, data) {
     // access the project title property
     // save it to a variable
     // use writeFile to append it to readme
-    fs.writeFile('readme', (answers), (err) =>
+    fs.writeFile(${fileName}, (answers), (err) =>
     err ? console.error(err) : console.log('Success!')
     );
 }
@@ -78,8 +78,10 @@ function writeToFile(fileName, data) {
 // function to initialize program
 function init() {
     // run the inquirer. prompt function to prompt questions
-    inquirer.prompt(questions).then((answers) => {
+    inquirer.prompt(questions).then((answers) => { 
+
         console.log(answers)
+
         writeToFile('README.md', generateMarkdown(answers))
 
         // console.log(JSON.stringify(answers, null, '  '))
@@ -95,7 +97,6 @@ function init() {
         
         // access the result from description input
         // append to a file called 
-
     });
      
 }
