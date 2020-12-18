@@ -9,7 +9,7 @@ function generateMarkdown(data) {
 
   <details>
 
-  <summary> Table of Contents </summary
+  <summary> Table of Contents </summary>
 
   [Description](###Description)
 
