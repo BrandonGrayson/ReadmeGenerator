@@ -36,7 +36,8 @@ Brandon Grayson
 #### Links
 https://github.com/BrandonGrayson/ReadmeGenerator
 
-#### Walk Through Video Guide
+#### Walk Through Video Guide Link
+https://drive.google.com/file/d/1-um1ZHERCKiJ7MlFKkw2mwJMj61bUn1G/view
 
 
 
