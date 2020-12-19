@@ -6,6 +6,7 @@ I WANT a README generator
 SO THAT I can quickly create a professional README for a new project
 
 ##Installation
+
 When running the readmeGenerator you should have a version of Node.js installed on your computer
 Also install Inquirer.js/ 
 
